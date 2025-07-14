@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jaquesrd - Chatbot que cria imagens usando o flux">
+    <title>Jaquesrd - Crie Imagens com Inteligência Artificial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css ">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .icon {
+            font-size: 2rem;
+            color: #4CAF50;
+            cursor: pointer;
+        }
+        .chatbot {
+            margin-top: 30px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .chatbot h2 {
+            margin-bottom: 15px;
+        }
+        .chatbot input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .chatbot button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .chatbot button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Jaquesrd</h1>
+        <p>Crie imagens incríveis com inteligência artificial</p>
+    </header>
 
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="container">
+        <div class="icons">
+            <!-- Ícones retirados do link fornecido -->
+            <i class="fas fa-home icon" title="Início"></i>
+            <i class="fas fa-info-circle icon" title="Sobre"></i>
+            <i class="fas fa-envelope icon" title="Contato"></i>
+        </div>
+
+        <div class="chatbot">
+            <h2>Crie sua imagem com IA</h2>
+            <input type="text" id="prompt" placeholder="Digite sua ideia aqui...">
+            <button onclick="criarImagem()">Gerar Imagem</button>
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2023 Jaquesrd. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        function criarImagem() {
+            const prompt = document.getElementById('prompt').value;
+            const resultadoDiv = document.getElementById('resultado');
+            if (prompt.trim() === "") {
+                resultadoDiv.innerHTML = "<p>Por favor, digite uma descrição.</p>";
+                return;
+            }
+
+            // Simulação de geração de imagem (substituir por integração real com o flux)
+            resultadoDiv.innerHTML = `
+                <p>Imagem gerada com base em: "${prompt}"</p>
+                <img src="https://via.placeholder.com/300 " alt="Imagem gerada">
+            `;
+        }
+    </script>
+</body>
+  </html>
