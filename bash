@@ -1,15 +1,4 @@
-npm run deploy
-#!/bin/bash
-
-# Script de deploy para GitHub Pages
-npm run build
-
-cd build || exit
-
-git init
-git add .
-git commit -m "Deploy"
-
-git push --force git@github.com:Toniakbanares/JaquesRD-.git main:gh-pages
-
-cd -
+curl -X POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0  \
+  -H "Authorization: Bearer SEU_TOKEN_AQUI" \
+  -H "Content-Type: application/json" \
+  -d '{"inputs":"A futuristic city at night"}'
